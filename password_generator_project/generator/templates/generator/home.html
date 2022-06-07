@@ -1,0 +1,26 @@
+<h1>Password Generator</h1>
+
+<form ACTION="{% url 'generatedPassword' %}">
+ <select name="length">
+     <option value="6">6 charlong</option>
+     <option value="7">7 charlong</option>
+     <option value="8">8 charlong</option>
+     <option value="9">9 charlong</option>
+     <option value="10">10 charlong</option>
+     <option value="11">11 charlong</option>
+     <option value="12" selected = "selected">12 charlong</option>
+     <option value="13">13 charlong</option>
+ </select>
+    <br>
+        <input type="checkbox" name="uppercase"> Uppercase
+    <br>
+        <input type="checkbox" name="numbers"> Numbers
+    <br>
+        <input type="checkbox" name="special"> Special
+    <br>
+    <input type="submit" value="Generate Pass">
+</form>
+
+<form action="{% url 'description' %}">
+    <input type="submit" value="Description">
+</form>
