@@ -1,26 +1,32 @@
-<h1>Password Generator</h1>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<div class="container text-center">
+    <h1>Генератор паролей</h1>
 
-<form ACTION="{% url 'generatedPassword' %}">
- <select name="length">
-     <option value="6">6 charlong</option>
-     <option value="7">7 charlong</option>
-     <option value="8">8 charlong</option>
-     <option value="9">9 charlong</option>
-     <option value="10">10 charlong</option>
-     <option value="11">11 charlong</option>
-     <option value="12" selected = "selected">12 charlong</option>
-     <option value="13">13 charlong</option>
- </select>
-    <br>
-        <input type="checkbox" name="uppercase"> Uppercase
-    <br>
-        <input type="checkbox" name="numbers"> Numbers
-    <br>
-        <input type="checkbox" name="special"> Special
-    <br>
-    <input type="submit" value="Generate Pass">
-</form>
+    <form ACTION="{% url 'generatedPassword' %}">
+        Длинна пароля
+        <select name="length">
+            <option value="6">6 Символов</option>
+            <option value="7">7 Символов</option>
+            <option value="8">8 Символов</option>
+            <option value="9">9 Символов</option>
+            <option value="10">10 Символов</option>
+            <option value="11">11 Символов</option>
+            <option value="12" selected="selected">12 Символов</option>
+            <option value="13">13 Символов</option>
+        </select>
+        <br>
+        <input type="checkbox" name="uppercase"> Включить верхний регистр
+        <br>
+        <input type="checkbox" name="numbers"> Включить цифры
+        <br>
+        <input type="checkbox" name="special"> Включить спец символы
+        <br>
+        <input type="submit" value="Generate Pass" class="btn btn-primary">
+    </form>
 
-<form action="{% url 'description' %}">
-    <input type="submit" value="Description">
-</form>
+    <form action="{% url 'description' %}">
+        <input type="submit" value="Description" class="btn btn-outline-info">
+    </form>
+</div>
